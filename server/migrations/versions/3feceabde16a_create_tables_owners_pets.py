@@ -1,8 +1,8 @@
 """Create tables owners, pets
 
-Revision ID: f520dd246110
+Revision ID: 3feceabde16a
 Revises: 
-Create Date: 2022-09-06 16:12:30.720304
+Create Date: 2023-09-20 14:53:55.533931
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'f520dd246110'
+revision = '3feceabde16a'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -29,7 +29,7 @@ def upgrade():
     sa.Column('name', sa.String(), nullable=True),
     sa.Column('species', sa.String(), nullable=True),
     sa.Column('owner_id', sa.Integer(), nullable=True),
-    sa.ForeignKeyConstraint(['owner_id'], ['owners.id'], ),
+    sa.ForeignKeyConstraint(['owner_id'], ['owners.id'], name=op.f('fk_pets_owner_id_owners')),
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###

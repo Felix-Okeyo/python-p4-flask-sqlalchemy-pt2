@@ -509,3 +509,4 @@ if __name__ == '__main__':
 - [Flask Extensions, Plug-ins, and Related Libraries - Full Stack Python](https://www.fullstackpython.com/flask-extensions-plug-ins-related-libraries.html)
 
 [flask_sqla]: https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#
+
